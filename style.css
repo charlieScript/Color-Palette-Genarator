@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    margin: 6rem 0rem 4rem 0rem;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    column-gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.cards {
+    padding: 7px;
+    position: relative;
+    height: 250px;
+    width: 150px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.color-tab:empty {
+    background-color: red;
+    height: 85%;
+    border-radius: 4px;
+}
+
+i {
+    position: absolute;
+    right: 4%;
+    top: 5px;
+    background-color: white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.color-code {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.generate {
+    padding: 1rem;
+    border: none;
+    color: white;
+    background-color: rgb(84, 55, 153);
+    font-weight: 500;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    outline: none;
+}
+
+.info {
+    margin-top: 3rem;
+    background-color: rgba(0, 0, 0, 0.726);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 1100px) {
+    .color-palette {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    }
+
+    .info {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .color-palette {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .color-palette {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .cards {
+        width: 80vw;
+        /* margin: 0 1rem; */
+        height: 200px;
+    }
+
+    i {
+        right: 5px;
+    }
+}
+
+
