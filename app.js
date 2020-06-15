@@ -77,6 +77,6 @@ function showAlert(color) {
         setTimeout(() => {
             para.remove();
         }, 300);
-    }, 1000);
+    }, 3000);
     return para;
 }
