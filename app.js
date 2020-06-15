@@ -9,11 +9,12 @@ generateColors.addEventListener("click", genColors);
 
 // generate random hex codes - source stackoverflow
 const rand = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
+const randTwo = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
 
 // generate colors from library - genral use
 // rand - form random / white - to set color balance
 const colors = chroma
-    .scale([rand, "white"])
+    .scale([rand, randTwo])
     .mode("hsl")
     .colors(7);
 
@@ -23,10 +24,11 @@ copyTestFunc(colors);
 // genrate colors
 function genColors() {
     const rand = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
+    const randtwo = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
     const colors = chroma
-        .scale([rand, "white"])
+        .scale([rand, randtwo])
         .mode("hsl")
-        .colors(7);
+        .colors(6);
     // pass in colors to the function
     copyTestFunc(colors)
 }
